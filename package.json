@@ -1,0 +1,11 @@
+{
+  "name": "node-project-wizard",
+  "version": "0.1.0",
+  "description": "A project to help manage your node project.",
+  "author": "Gio d'Amelio",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/giodamelio/node-project-wizard.git"
+  },
+  "license": "MIT"
+}
