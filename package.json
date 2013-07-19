@@ -7,5 +7,9 @@
     "type": "git",
     "url": "git://github.com/giodamelio/node-project-wizard.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "connect": "~2.8.4",
+    "sockjs": "~0.3.7"
+  }
 }
