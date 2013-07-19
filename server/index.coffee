@@ -1,8 +1,8 @@
-connect = require "connect"
+express = require "express"
 
-server = connect()
+server = express()
 
-server.use connect.static(require("path").normalize(__dirname + "/../client"))
+server.use express.static(require("path").normalize(__dirname + "/../client"))
 
 console.log "Listening on localhost:3141..."
 server.listen "3141"

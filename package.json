@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "connect": "~2.8.4",
-    "sockjs": "~0.3.7"
+    "sockjs": "~0.3.7",
+    "express": "~3.3.4"
   }
 }
