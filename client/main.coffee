@@ -1,2 +1,1 @@
-console.log "HAHA!!!!!!!!!!!!!"
-console.log "ass"
+console.log "Oh YA!!!!as"

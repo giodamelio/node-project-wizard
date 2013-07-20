@@ -16,6 +16,18 @@ task "client", "Build the client", ->
 task "watch:client", "Watch and auto-build the client", ->
     spawn "./node_modules/.bin/nodemon", "-q -w client -x ./node_modules/.bin/browserify -t coffeeify -o client/bundle.js -w client client/main.coffee"
 
-task "watch:both", "Watch and auto-reload the server and auto-build the client", ->
+task "livereload", "Setup livereload server", ->
+    # Setup the livereload server
+    tinylr = require "tiny-lr"
+    server = tinylr()
+    server.listen 35729, (err) ->
+        if err then throw err
+        console.log 'Listening on 35729'
+
+    # Send the reload command
+    spawn "./node_modules/.bin/nodemon", "-q -w client sendreload.coffee"
+
+task "watch", "Watch and auto-reload the server and auto-build the client", ->
     invoke "watch:server"
     invoke "watch:client"
+    invoke "livereload"
